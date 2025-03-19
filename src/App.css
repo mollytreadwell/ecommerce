@@ -7,15 +7,18 @@ h1 {
   padding: 10px;
   margin: 20px;
   text-align: center;
-  border: 3px solid gray;
-  border-radius: 10%;
-  background-color: aquamarine;
   color: gray;
 }
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  color: gray;
+}
+
+h4 {
+  text-align: center;
+  color: gray;
 }
 
 p {
@@ -38,9 +41,16 @@ p {
 .img {
   height: 200px;
   width: 175px;
-  align-items: ;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .button {
   background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

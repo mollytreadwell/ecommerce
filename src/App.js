@@ -32,7 +32,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>Simple E-commerce</h1>
+      <h1>WILD FEMME</h1>
+      <h4><i>unapologetically strong and free-spirited</i></h4>
      <ProductList products={products} addToCart={addToCart} />
       <Cart cartItems={cartItems}  />  
       <Button variant='outline-warning' onClick={() => clearCart(cartItems.id)}>CLEAR</Button>

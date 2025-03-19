@@ -10,7 +10,7 @@ const Product = ({ product, addToCart }) => {
       <p>{product.item}: {product.price}</p>
       <img className="img" src={product.image} alt='image'/>
       <br/>
-      <Button variant='outline-warning' onClick={() => addToCart(product)}>Add to Cart</Button>
+      <Button variant='outline-warning' className="button" onClick={() => addToCart(product)}>Add to Cart</Button>
     </div>
   );
 };
