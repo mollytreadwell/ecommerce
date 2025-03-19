@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
+import Sidebar from './Components/Sidebar';
+import Header from './Components/Header';
 
 import watch from './images/watch.jpg';
 import headband from './images/headband.jpg';
@@ -29,14 +31,23 @@ const App = () => {
 
   const clearCart = () => setCartItems([]);
   
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <div>
       <h1>WILD FEMME</h1>
       <h4><i>unapologetically strong and free-spirited</i></h4>
+      <Header/>
      <ProductList products={products} addToCart={addToCart} />
-      <Cart cartItems={cartItems}  />  
-      <Button variant='outline-warning' onClick={() => clearCart(cartItems.id)}>CLEAR</Button>
+
+     <Button className='cartButton' variant='outline-warning' onClick={toggleSidebar}>BASKET</Button>
+     <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} cartItems={cartItems}/> <br/>
+     <Button className='cartButton' variant='outline-warning' onClick={() => clearCart(cartItems.id)}>CLEAR</Button>
+ 
     </div>
   );
 };
